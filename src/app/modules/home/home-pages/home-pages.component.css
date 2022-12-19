@@ -1,0 +1,66 @@
+.ContentHome{
+    background-image: url('../../../../assets/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 88vh;
+    width: 100%;
+}
+.contentImgHome{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contentImgHome img:nth-child(1){
+    width: 600px;
+    margin-bottom: -80px;
+}
+.contentImgHome img:nth-child(2){
+    width: 300px;
+    border-radius: 50%;
+}
+.ContentHome button{
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #E6EFFF;
+    color: #E6EFFF;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0px 0px 20px 0px #223440;
+    padding: 0 10px;
+    margin-top: 30px;
+    cursor: pointer;
+    /**/
+    background: rgb(162,226,66);
+background: -moz-linear-gradient(90deg, rgba(162,226,66,1) 0%, rgba(0,175,157,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(162,226,66,1) 0%, rgba(0,175,157,1) 100%);
+background: linear-gradient(90deg, rgba(162,226,66,1) 0%, rgba(0,175,157,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a2e242",endColorstr="#00af9d",GradientType=1);
+transition: ease all 0.3s;
+}
+
+.ContentHome button:hover{
+    transform: scale(1.1);
+}
+@media (max-width:767px) {
+    .contentImgHome img:nth-child(1){
+        width: 300px;
+        margin-bottom: -20px;
+    }
+    .contentImgHome img:nth-child(2){
+        width: 150px;
+    }
+    .ContentHome{
+        background-image: url('../../../../assets/background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right;
+        height: 88vh;
+        overflow: hidden;
+        width: 100%;
+    }
+    
+}

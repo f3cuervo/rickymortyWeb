@@ -1,0 +1,14 @@
+.header{
+    background-color:#223440 ;
+    width: 98%;
+   
+    padding: 10px;
+}
+.ContentImgHeader{
+    padding-left: 10px;
+    
+}
+.ContentImgHeader img{
+    width: 50px;
+    cursor: pointer;
+}

@@ -1,0 +1,49 @@
+<!--acá va el spinner-->
+<app-spinner></app-spinner>
+<div class="ContentTittleList">
+    <h3>Characters</h3>
+</div>
+<div id="contentCards">
+    <div class="card" *ngFor="let personaje of personajes">
+        <div class="ContentImgTop">
+            <img src="../../../assets/imgTop.png" alt="">
+        </div>
+        <div class="ContentId">
+            <div>
+                <p>{{personaje.id}}</p>
+            </div>
+        </div>
+        <div class="ContentIMG">
+            <img src={{personaje.image}} alt="">
+        </div>
+        <div class="ContentName">
+            <h3>{{personaje.name}}</h3>
+        </div>
+        <div class="contentInfoAH">
+            <div class="ContentAlive">
+                <div [ngClass]="{
+                    'indicatorLiveGreen':personaje.status==='Alive',
+                    'indicatorLiveRed':personaje.status==='Dead',
+                    'indicatorLiveYellow':personaje.status==='unknown'
+                }" class="indicatorLive"></div>
+                <p> {{personaje.status}}</p>
+            </div>
+            <p>{{personaje.species}} </p>
+        </div>
+        <hr style="width: 100%;">
+        <div class="ContentCommonInfo">
+            <div class="commonInfo">
+                <p class="textGray">Origin:</p>
+                <p>{{personaje.origin.name}}</p>
+            </div>
+            <div class="commonInfo">
+                <p class="textGray">Location:</p>
+                <p>{{personaje.location.name}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ContentButtons">
+    <button *ngIf="prev" (click)="loadChars(prev)">Anterior</button>
+<button *ngIf="next" (click)="loadChars(next)">Siguiente</button>
+</div>
